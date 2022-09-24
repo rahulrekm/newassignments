@@ -32,7 +32,7 @@ class _TabwithBottomState extends State with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Center(
+          title: const Center(
             child: Text("Week Days"),
           ),
           backgroundColor: Colors.purpleAccent,
@@ -42,8 +42,12 @@ class _TabwithBottomState extends State with SingleTickerProviderStateMixin {
             controller: _tabController,
             children: <Widget>[
               TopTabView(),
-              Image(image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-63WX3JbD8ZTaUoPO1YSP8wlo6o6EAxee4g&usqp=CAU")),
-              Image(image: NetworkImage("https://webscom.zendesk.com/hc/article_attachments/209054487/member_tabs.jpg")),
+              const Image(
+                  image: NetworkImage(
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-63WX3JbD8ZTaUoPO1YSP8wlo6o6EAxee4g&usqp=CAU")),
+              const Image(
+                  image: NetworkImage(
+                      "https://webscom.zendesk.com/hc/article_attachments/209054487/member_tabs.jpg")),
             ],
           ),
         ),
@@ -53,7 +57,7 @@ class _TabwithBottomState extends State with SingleTickerProviderStateMixin {
             controller: _tabController,
             unselectedLabelColor: Colors.greenAccent,
             labelColor: Colors.yellowAccent,
-            tabs: <Widget>[
+            tabs: const <Widget>[
               Tab(
                 icon: Icon(Icons.home),
                 text: "Home",
@@ -96,85 +100,117 @@ class _ToptabViewState extends State with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(kToolbarHeight),
+        preferredSize: const Size.fromHeight(75),
         child: TabBar(
           controller: _tabController,
           unselectedLabelColor: Colors.cyanAccent,
           labelColor: Colors.green,
           tabs: <Widget>[
             Tab(
+              iconMargin: const EdgeInsets.only(bottom: 1),
               icon: Image.asset(
                 "assets/icons/icons8-sunday-64.png",
                 width: 36,
-                height: 28,
+                height: 36,
               ),
-              child: Text("Sunday"),
+              child: const Text("Sunday"),
             ),
             Tab(
+              iconMargin: const EdgeInsets.only(bottom: 1),
               icon: Image.asset(
                 "assets/icons/icons8-monday-64.png",
                 width: 36,
-                height: 28,
+                height: 36,
               ),
-              child: Text("Monday"),
+              child: const Text("Monday"),
             ),
             Tab(
+              iconMargin: const EdgeInsets.only(bottom: 1),
               icon: Image.asset(
                 "assets/icons/icons8-tuesday-64.png",
                 width: 36,
-                height: 28,
+                height: 36,
               ),
-              child: Text("Tuesday"),
+              child: const Text("Tuesday"),
             ),
             Tab(
+              iconMargin: const EdgeInsets.only(bottom: 1),
               icon: Image.asset(
-                "assets/icons/icons8-tuesday-64.png",
+                "assets/icons/icons8-wednesday-64.png",
                 width: 36,
-                height: 28,
+                height: 36,
               ),
-              child: Text("Wednesday"),
+              child: const Text("Wednesday"),
             ),
             Tab(
+              iconMargin: const EdgeInsets.only(bottom: 1),
               icon: Image.asset(
-                "assets/icons/icons8-tuesday-64.png",
+                "assets/icons/icons8-thursday-64.png",
                 width: 36,
-                height: 28,
+                height: 36,
               ),
-              child: Text("Thursday"),
+              child: const Text("Thursday"),
             ),
             Tab(
+              iconMargin: const EdgeInsets.only(bottom: 1),
               icon: Image.asset(
-                "assets/icons/icons8-tuesday-64.png",
+                "assets/icons/icons8-friday-64.png",
                 width: 36,
-                height: 28,
+                height: 36,
               ),
-              child: Text("Friday"),
+              child: const Text("Friday"),
             ),
             Tab(
+              iconMargin: const EdgeInsets.only(bottom: 1),
               icon: Image.asset(
-                "assets/icons/icons8-tuesday-64.png",
+                "assets/icons/icons8-saturday-64.png",
                 width: 36,
-                height: 28,
+                height: 36,
               ),
-              child: Text("Saturday"),
+              child: const Text("Saturday"),
             ),
           ],
         ),
       ),
       body: TabBarView(
         controller: _tabController,
-        children: [
-          Image(image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqNuaL4486iNB7u2uSqvRv1kCaqfAONNfXLQ&usqp=CAU"),fit: BoxFit.cover
-            ,),
-          Image(image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR324ZV6DhvMaOeNXti2CyvGb-Z9BOgNM_NQ&usqp=CAU"),fit: BoxFit.cover,),
-          Image(image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCpKgInE0Sg7-lSxZzGMf1cVATLGv5VpL8iw&usqp=CAU"),fit: BoxFit.cover,),
-          Image(image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEp0RPEtGFVWbUDEIdB4O8ONa0FkqreHmvnQ&usqp=CAU"),fit: BoxFit.cover,),
-          Image(image: NetworkImage("https://pbs.twimg.com/profile_images/1543547831079804928/jmURZ8fH_400x400.jpg"),fit: BoxFit.cover,),
-          Image(image: NetworkImage("https://thumbs.dreamstime.com/b/happy-friday-everyone-friendly-message-204057812.jpg"),fit: BoxFit.cover,),
-          Image(image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBToHHflS3pWf2V1kDm3ECAb7bfQYgYYvXdQ&usqp=CAU"),fit: BoxFit.cover,),
-
+        children: const [
+          Image(
+            image: NetworkImage(
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqNuaL4486iNB7u2uSqvRv1kCaqfAONNfXLQ&usqp=CAU"),
+            fit: BoxFit.cover,
+          ),
+          Image(
+            image: NetworkImage(
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR324ZV6DhvMaOeNXti2CyvGb-Z9BOgNM_NQ&usqp=CAU"),
+            fit: BoxFit.cover,
+          ),
+          Image(
+            image: NetworkImage(
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCpKgInE0Sg7-lSxZzGMf1cVATLGv5VpL8iw&usqp=CAU"),
+            fit: BoxFit.cover,
+          ),
+          Image(
+            image: NetworkImage(
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEp0RPEtGFVWbUDEIdB4O8ONa0FkqreHmvnQ&usqp=CAU"),
+            fit: BoxFit.cover,
+          ),
+          Image(
+            image: NetworkImage(
+                "https://pbs.twimg.com/profile_images/1543547831079804928/jmURZ8fH_400x400.jpg"),
+            fit: BoxFit.cover,
+          ),
+          Image(
+            image: NetworkImage(
+                "https://thumbs.dreamstime.com/b/happy-friday-everyone-friendly-message-204057812.jpg"),
+            fit: BoxFit.cover,
+          ),
+          Image(
+            image: NetworkImage(
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBToHHflS3pWf2V1kDm3ECAb7bfQYgYYvXdQ&usqp=CAU"),
+            fit: BoxFit.cover,
+          ),
         ],
-
       ),
     );
   }
