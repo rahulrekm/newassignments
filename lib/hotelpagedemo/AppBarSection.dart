@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:outline_search_bar/outline_search_bar.dart';
-//
-// class AppBarSection extends StatefulWidget{
-//   @override
-//   State<StatefulWidget> createState() => _AppBarState();
-//
-// }
+
 
 class AppBarSection extends StatelessWidget{
   @override
