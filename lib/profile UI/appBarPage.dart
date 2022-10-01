@@ -43,7 +43,7 @@ class AppBarPage extends StatelessWidget {
               Row(
                 children: const [
                   SizedBox(
-                    width: 100,
+                    width: 150,
                   ),
                   Icon(
                     Icons.facebook,
